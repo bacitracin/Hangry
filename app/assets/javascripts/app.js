@@ -13,14 +13,14 @@ var openTableApp = angular
                     controller: 'RestaurantController as restaurant'
                   });
                   //.state('new', {
-                  //  url: '/',
-                  //  templateUrl: 'app/views/home.html',
-                  //  controller: 'TestCtrl as test'
+                  //  url: '/new',
+                  //  templateUrl: 'app/views/new.html',
+                  //  controller: 'NewRestaurantController as restaurant'
                   //});
-                  //.state('home', {
-                  //  url: '/',
-                  //  templateUrl: 'app/views/home.html',
-                  //  controller: 'TestCtrl as test'
+                  //.state('restaurant', {
+                  //  url: '/restaurant/:id',
+                  //  templateUrl: 'app/views/show.html',
+                  //  controller: 'ShowRestaurantController as show'
                   //});
                   //.state('home', {
                   //  url: '/',
