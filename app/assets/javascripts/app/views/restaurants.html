@@ -1,1 +1,8 @@
-Here is where to get the best food in {{city}} {{price}}
+<h3>Restaurants</h3>
+<ul>
+  <li ng-repeat="restaurant in restaurant.restaurants">
+    <h3>{{ restaurant.name }}</h3>
+      Price Level: {{ restaurant.price }}<br>
+
+  </li>
+</ul>

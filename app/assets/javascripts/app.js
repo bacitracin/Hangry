@@ -1,5 +1,5 @@
 var openTableApp = angular
-                .module('openTableApp', ['ui.router', 'templates'])
+                .module('openTableApp', ['ui.router', 'templates', 'ngResource'])
                 .config(function($stateProvider, $urlRouterProvider){
                   $stateProvider
                     .state('home', {
@@ -12,7 +12,7 @@ var openTableApp = angular
                     templateUrl: 'app/views/restaurants.html',
                     controller: 'RestaurantController as restaurant'
                   });
-                  //.state('home', {
+                  //.state('new', {
                   //  url: '/',
                   //  templateUrl: 'app/views/home.html',
                   //  controller: 'TestCtrl as test'
