@@ -1,3 +1,7 @@
+<a ui-sref="restaurants.new">Add a New Restaurant</a>
+
+<div ui-view></div>
+
 <h3>Search Restaurants</h3>
 Search: <input type="text" placeholder="Name" ng-model="searchRestaurants.name" />
   or   <input type="text" placeholder="City" ng-model="searchRestaurants.city" />
@@ -7,5 +11,3 @@ Search: <input type="text" placeholder="Name" ng-model="searchRestaurants.name" 
     <h3>{{ restaurant.name}} - {{ restaurant.city }}</h3>
   </li>
 </ul>
-
-<div ui-view></div>
