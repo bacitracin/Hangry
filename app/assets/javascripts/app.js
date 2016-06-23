@@ -12,7 +12,7 @@ var openTableApp = angular
                     templateUrl: 'app/views/restaurants.html',
                     controller: 'RestaurantController as restaurant'
                   })
-                  .state('restaurants.new', {  // doesn't break right now, but doesn't show :/
+                  .state('restaurants.new', {  
                     url: '/new',
                     templateUrl: 'app/views/new.html',
                     controller: 'NewRestaurantController as new'
