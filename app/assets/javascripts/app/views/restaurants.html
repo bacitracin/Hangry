@@ -1,12 +1,11 @@
-<h3>Restaurants</h3>
-<ul>
-  <li ng-repeat="restaurant in restaurant.restaurants">
-    <h3>{{ restaurant.name }}</h3>
-      Price Level: {{ restaurant.price }}<br>
+<h3>Search Restaurants</h3>
+Search: <input type="text" placeholder="Name" ng-model="searchRestaurants.name" />
+  or   <input type="text" placeholder="City" ng-model="searchRestaurants.city" />
 
+<ul>
+  <li ng-repeat="restaurant in restaurant.restaurants | filter: searchRestaurants">
+    <h3>{{ restaurant.name}} - {{ restaurant.city }}</h3>
   </li>
 </ul>
-
-<a ui-sref=”restaurants.new”>Add a new restaurant</a>
 
 <div ui-view></div>

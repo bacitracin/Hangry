@@ -1,1 +1,22 @@
-NEW.html
+<h1>Add a New Restaurant </h1>
+<form validate ng-submit=”new.addRestaurant()”>
+ <label for=”name”>Name</label>
+ <input type='text' ng-model='new.restaurant.name' name=”name”><br>
+
+ <label for=”address”>Address</label>
+ <input type="text" ng-model="new.restaurant.address" name=”address”><br>
+
+ <label for=”city”>City</label>
+ <input type= "text" ng-model="new.restaurant.city" name=”city”><br>
+
+ <label for=”state”>State</label>
+ <input type="text" ng-model="new.restaurant.state" name=”state”><br>
+
+ <label for=”postal_code”>Zip Code</label>
+ <input type="text" ng-model="new.restaurant.postal_code" name=”postal_code”><br>
+
+ <label for=”price”>Price Level</label>
+ <input type="text" ng-model="new.restaurant.price" name=”price”><br>
+
+ <input type="submit" value="Submit">
+</form>
