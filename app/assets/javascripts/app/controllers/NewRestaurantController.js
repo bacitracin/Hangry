@@ -4,12 +4,17 @@ angular
 
 function NewRestaurantController(Restaurant, $location) {
   
-  var restaurant = this; 
+  var new = this; 
 
-  restaurant.restaurant = new Restaurant();
-  restaurant.addRestaurant = function() {
-    restaurant.restaurant.$save(function() {
+  new.restaurant = new Restaurant();
+
+  new.addRestaurant = function() {
+    new.restaurant.$save(function() {
       $location.path('restaurants');
     });
   };
 }
+
+// $save() saves an entry. 
+// Assuming $scope.entry is the Entry object  
+// https://www.sitepoint.com/creating-crud-app-minutes-angulars-resource/

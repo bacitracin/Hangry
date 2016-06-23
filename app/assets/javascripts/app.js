@@ -11,12 +11,12 @@ var openTableApp = angular
                     url: '/restaurants',
                     templateUrl: 'app/views/restaurants.html',
                     controller: 'RestaurantController as restaurant'
-                  });
-                  //.state('new', {
-                  //  url: '/new',
-                  //  templateUrl: 'app/views/new.html',
-                  //  controller: 'NewRestaurantController as restaurant'
-                  //});
+                  })
+                  .state('restaurants.new', {  // doesn't break right now, but doesn't show :/
+                    url: '/new',
+                    templateUrl: 'app/views/new.html',
+                    controller: 'NewRestaurantController as new'
+                  })
                   //.state('restaurant', {
                   //  url: '/restaurant/:id',
                   //  templateUrl: 'app/views/show.html',
