@@ -2,7 +2,8 @@
 
 <form>
   <h3>Enter Your City:</h3>
-  <input type="text" ng-model='city' name="city"><br><br>
-  <a href="#/wildcard">Just tell me where to eat!</a><br><br>
+  <input type="text" ng-model='city' name="city"><br><br><br>
   <a href="#/restaurants">Search all Saved Restaurants</a>
 </form>
+<a ui-sref="home.wildcard">Just Tell me where to eat!</a><br><br>
+<div ui-view></div>

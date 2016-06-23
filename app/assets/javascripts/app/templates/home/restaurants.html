@@ -1,0 +1,9 @@
+<h3>Search Restaurants</h3>
+Search: <input type="text" placeholder="Name" ng-model="searchRestaurants.name" />
+  or   <input type="text" placeholder="City" ng-model="searchRestaurants.city" />
+
+<ul>
+  <li ng-repeat="restaurant in restaurant.restaurants | filter: searchRestaurants">
+    <h3>{{ restaurant.name}} - {{ restaurant.city }}</h3>
+  </li>
+</ul>

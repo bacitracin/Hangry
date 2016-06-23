@@ -7,6 +7,11 @@ var openTableApp = angular
                       templateUrl: 'app/views/home.html',
                       controller: 'HomeController as home'
                     })
+                  .state('home.wildcard', {
+                    url: 'wildcard',
+                    templateUrl: 'app/views/wildcard.html',
+                    controller: 'WildCardController as wildcard'
+                  })
                   .state('restaurants', {
                     url: '/restaurants',
                     templateUrl: 'app/views/restaurants.html',
@@ -17,11 +22,6 @@ var openTableApp = angular
                     templateUrl: 'app/views/new.html',
                     controller: 'NewRestaurantController as new'
                   })
-                  //.state('restaurant', {
-                  //  url: '/restaurant/:id',
-                  //  templateUrl: 'app/views/show.html',
-                  //  controller: 'ShowRestaurantController as show'
-                  //});
                   //.state('home', {
                   //  url: '/',
                   //  templateUrl: 'app/views/home.html',
