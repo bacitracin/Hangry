@@ -2,14 +2,12 @@ angular
   .module('openTableApp') 
   .controller('NewRestaurantController', NewRestaurantController); 
 
-function NewRestaurantController(Restaurant, $location) {
-  
-  var newRestaurant = this; 
+function NewRestaurantController(Restaurant, $location, $scope) {
 
-  newRestaurant.restaurant = new Restaurant();
+  $scope.restaurant = new Restaurant();
 
-  newRestaurant.addRestaurant = function() {
-    newRestaurant.restaurant.$save(function() {
+  $scope.addRestaurant = function() {
+    $scope.restaurant.$save(function() {
       $location.path('restaurants');
     });
   };

@@ -1,13 +1,16 @@
-<a ui-sref="restaurants.new">Add a New Restaurant</a>
-
-<div ui-view></div>
+<a href="#/new">Add a New Restaurant</a>
 
 <h3>Search Restaurants</h3>
 Search: <input type="text" placeholder="Name" ng-model="searchRestaurants.name" />
   or   <input type="text" placeholder="City" ng-model="searchRestaurants.city" />
 
 <ul>
-  <li ng-repeat="restaurant in restaurant.restaurants | filter: searchRestaurants">
+  <li ng-repeat="restaurant in restaurant.restaurants | orderBy: 'name' | filter: searchRestaurants">
     <h3>{{ restaurant.name}} - {{ restaurant.city }}</h3>
+    <a href="#" ui-sref="showRestaurant.restaurant({id: restaurant.id})">See more</a>
+     </li>
   </li>
 </ul>
+
+
+<div ui-view></div>

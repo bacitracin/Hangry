@@ -17,16 +17,16 @@ var openTableApp = angular
                     templateUrl: 'app/views/restaurants.html',
                     controller: 'RestaurantController as restaurant'
                   })
-                  .state('restaurants.new', {  
+                  .state('new', {  
                     url: '/new',
                     templateUrl: 'app/views/new.html',
                     controller: 'NewRestaurantController as newRestaurant'
                   })
-                  //.state('restaurants.show', { // SHOW PAGE for restaurant
-                  //  url: '/restaurants/:id',
-                  //  templateUrl: 'app/views/home.html',
-                  //  controller: 'ShowRestaurantController as showRestaurant'
-                  //});
+                  .state('restaurants.show', { // SHOW PAGE for restaurant
+                    url: 'restaurant/:id',
+                    templateUrl: 'app/views/show.html',
+                    controller: 'ShowRestaurantController as showRestaurant'
+                  });
 
                   // Defaults to home
                     $urlRouterProvider.otherwise('/');

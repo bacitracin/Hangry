@@ -1,29 +1,29 @@
 <h1>Add a New Restaurant </h1>
 <h3>Name and City are required</h3>
 
-<form name="form">
+<form name="form" ng-submit="newRestaurant.restaurant.addNote()">
 
   <label for=”name”>Name</label>
-  <input type = "text" name="name" minLength="2" maxlength="20" required="required" ng-model="newRestaurant.name"><br>
+  <input type = "text" name="name" minLength="2" maxlength="20" required="required" ng-model="newRestaurant.restaurant.name"><br>
 
 
   <label for=”address”>Address</label>
-  <input type = "text" name="address" ng-model="newRestaurant.address"><br>
+  <input type = "text" name="address" ng-model="newRestaurant.restaurant.address"><br>
 
   <label for=”city”>City</label>
-  <input type = "text" name="city" required="required" ng-model="newRestaurant.city"><br>
+  <input type = "text" name="city" required="required" ng-model="newRestaurant.restaurant.city"><br>
 
   <label for=”state”>State</label>
-  <input type = "text" name="state" ng-model="newRestaurant.state"><br>
+  <input type = "text" name="state" ng-model="newRestaurant.restaurant.state"><br>
 
   <label for=”postalCode”>Postal Code</label>
-  <input type = "number" name="postalCode" minlength="5" ng-model="newRestaurant.postalCode"><br>
+  <input type = "number" name="postalCode" minlength="5" ng-model="newRestaurant.restaurant.postalCode"><br>
 
   <label for=”phone”>Phone Number</label>
-  <input type = "number" name="phone" ng-model="newRestaurant.phone"><br>
+  <input type = "number" name="phone" ng-model="newRestaurant.restaurant.phone"><br>
 
   <label for=”price”>Price Level 1-4</label>
-  <input type = "number" name="price" min="1" max="4" ng-model="newRestaurant.price"><br><br>
+  <input type = "number" name="price" min="1" max="4" ng-model="newRestaurant.restaurant.price"><br><br>
 
   <div ng-if="form.name.$touched">
     <div ng-if="form.name.$error.required">
@@ -57,5 +57,7 @@
       Enter a price level between 1-4.
     </div>
   </div>
+
+  <input type="submit" value="Add This Restaurant">
 
 </form>
