@@ -20,12 +20,12 @@ var openTableApp = angular
                   .state('restaurants.new', {  
                     url: '/new',
                     templateUrl: 'app/views/new.html',
-                    controller: 'NewRestaurantController as new'
+                    controller: 'NewRestaurantController as newRestaurant'
                   })
-                  //.state('home', {
-                  //  url: '/',
+                  //.state('restaurants.show', { // SHOW PAGE for restaurant
+                  //  url: '/restaurants/:id',
                   //  templateUrl: 'app/views/home.html',
-                  //  controller: 'TestCtrl as test'
+                  //  controller: 'ShowRestaurantController as showRestaurant'
                   //});
 
                   // Defaults to home
