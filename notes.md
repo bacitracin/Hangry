@@ -61,3 +61,9 @@
   <input type="submit" value="Add This Restaurant">
 
 </form>
+
+restaurants.deleteRestaurant = function(restaurant) {
+  Restaurant.delete(function(){
+    $state.go($state.current, {}, {reload: true});
+  });
+};

@@ -9,10 +9,10 @@ function RestaurantsController(Restaurant, $location, $state) {
   // query() returns all the entries - INDEX
   restaurants.restaurants = Restaurant.query();
 
-  //delete
-  restaurants.deleteRestaurant = function(restaurant) {
-    restaurant.$delete(function(){
-      $state.go($state.current, {}, {reload: true});
-    });
-  };
+  // delete - not working
+  //restaurants.deleteRestaurant = function(restaurant){
+  //  restaurant.$delete(function(){
+  //    $state.go($state.current, {}, {reload: true});
+  //  });
+  //}
 };
