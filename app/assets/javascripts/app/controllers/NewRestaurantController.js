@@ -5,12 +5,12 @@ angular
 function NewRestaurantController(Restaurant, $location) {
 
 
-  var ctrl = this;
+  var newRestaurant = this;
 
-  ctrl.restaurant = new Restaurant();
+  newRestaurant.restaurant = new Restaurant();
 
-  ctrl.addRestaurant = function() {
-    ctrl.restaurant.$save(function(){
+  newRestaurant.addRestaurant = function() {
+    newRestaurant.restaurant.$save(function(){
       $location.path('restaurants');
     });
   };
