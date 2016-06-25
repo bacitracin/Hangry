@@ -8,7 +8,7 @@ function EditRestaurantController(Restaurant, $location, $stateParams) {
 
   editRestaurant.restaurant = Restaurant.get({ id: $stateParams.id})
 
-  editRestaurant.restaurant = function(){
+  editRestaurant.editRestaurant = function(){
     editRestaurant.restaurant.$update(function(){
       $location.path('restaurants');
     });

@@ -7,7 +7,9 @@ Search by: <input type="text" placeholder="Name" ng-model="searchRestaurants.nam
 <ul>
   <li ng-repeat="restaurant in restaurants.restaurants | orderBy: 'name' | filter: searchRestaurants">
     <h3>{{ restaurant.name}} - {{ restaurant.city }} -
-    <a href="#" ui-sref="restaurant({id: restaurant.id})">See more</a> <a href="#" ui-sref="edit({id: restaurant.id})">Edit details</a> </h3>
+    <a href="#" ui-sref="restaurant({id: restaurant.id})">See More</a> -
+    <a href="#" ui-sref="edit({id: restaurant.id})">Edit Details</a> - 
+    <a href="#" ng-click=”restaurants.deleteRestaurant(restaurant)”>Delete</a>  </h3>
      </li>
   </li>
 </ul>
