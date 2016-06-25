@@ -32,6 +32,12 @@ var openTableApp = angular
                       templateUrl: 'app/views/show.html',
                       controller: 'ShowRestaurantController as showRestaurant'
                     })
+                    // Edit restaurant details
+                    .state('edit', {
+                      url:'/edit/:id',
+                      templateUrl: 'app/views/edit.html',
+                      controller: 'EditRestaurantController as editRestaurant'
+                    })
 
                     // Defaults to home
                       $urlRouterProvider.otherwise('/');

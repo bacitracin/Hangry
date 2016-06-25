@@ -1,29 +1,29 @@
-<h1>Add a New Restaurant </h1>
+<h1>Edit Restaurant Details</h1>
 <h3>Name and City are required</h3>
 
-<form name="form"  ng-submit="newRestaurant.addRestaurant()">
+<form name="form"  ng-submit="editRestaurant.editRestaurant()">
 
   <label for=”name”>Name</label>
-  <input type = "text" name="name" minLength="2" maxlength="20" required="required" ng-model="newRestaurant.restaurant.name"><br>
+  <input type = "text" name="name" minLength="2" maxlength="20" required="required" ng-model="editRestaurant.restaurant.name"><br>
 
 
   <label for=”address”>Address</label>
-  <input type = "text" name="address" ng-model="newRestaurant.restaurant.address"><br>
+  <input type = "text" name="address" ng-model="editRestaurant.restaurant.address"><br>
 
   <label for=”city”>City</label>
-  <input type = "text" name="city" required="required" ng-model="newRestaurant.restaurant.city"><br>
+  <input type = "text" name="city" required="required" ng-model="editRestaurant.restaurant.city"><br>
 
   <label for=”state”>State</label>
-  <input type = "text" name="state" ng-model="newRestaurant.restaurant.state"><br>
+  <input type = "text" name="state" ng-model="editRestaurant.restaurant.state"><br>
 
   <label for=”postal_code”>Postal Code</label>
-  <input type = "number" name="postal_code" minlength="5" ng-model="newRestaurant.restaurant.postal_code"><br>
+  <input type = "number" name="postal_code" minlength="5" ng-model="editRestaurant.restaurant.postal_code"><br>
 
   <label for=”phone”>Phone Number</label>
-  <input type = "number" name="phone" ng-model="newRestaurant.restaurant.phone"><br>
+  <input type = "number" name="phone" ng-model="editRestaurant.restaurant.phone"><br>
 
   <label for=”price”>Price Level 1-4</label>
-  <input type = "number" name="price" min="1" max="4" ng-model="newRestaurant.restaurant.price"><br><br>
+  <input type = "number" name="price" min="1" max="4" ng-model="editRestaurant.restaurant.price"><br><br>
 
   <div ng-if="form.name.$touched">
     <div ng-if="form.name.$error.required">
@@ -58,6 +58,6 @@
     </div>
   </div>
 
-  <input type="submit" value="Add This Restaurant">
+  <input type="submit" value="Update">
 
 </form>
