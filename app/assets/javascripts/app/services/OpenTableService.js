@@ -4,6 +4,6 @@ angular
 
 function OpenTableService($http){
 
-  this.city = "San Francisco";
+  this.city = "Houston";
 
 }

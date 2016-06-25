@@ -1,32 +1,63 @@
-id
-name
-address
-city ** search by
-state 
-postal_code
-image
-reserve_url
-price ** search
+<h1>Add a New Restaurant </h1>
+<h3>Name and City are required</h3>
 
-Sample output
-{
-id: 7267,
-name: "10pin Bowling Lounge",
-address: "330 N State Street",
-city: "Chicago",
-state: "IL",
-area: "Chicago / Illinois",
-postal_code: "60610",
-country: "US",
-phone: "3126440300x",
-lat: 41.888634,
-lng: -87.628091,
-price: 4,
-reserve_url: "http://www.opentable.com/single.aspx?rid=7267",
-mobile_reserve_url: "http://mobile.opentable.com/opentable/?restId=7267",
-image_url: "https://www.opentable.com/img/restimages/7267.jpg"
-},
+<form name="form"  ng-submit="newRestaurant.addRestaurant()">
 
-rails g model Restaurant id:integer name:string 
-address:string city:string state:string postal_code:string image:string 
-reserve_url:string price:integer
+  <label for=”name”>Name</label>
+  <input type = "text" name="name" minLength="2" maxlength="20" required="required" ng-model="newRestaurant.restaurant.name"><br>
+
+
+  <label for=”address”>Address</label>
+  <input type = "text" name="address" ng-model="newRestaurant.restaurant.address"><br>
+
+  <label for=”city”>City</label>
+  <input type = "text" name="city" required="required" ng-model="newRestaurant.restaurant.city"><br>
+
+  <label for=”state”>State</label>
+  <input type = "text" name="state" ng-model="newRestaurant.restaurant.state"><br>
+
+  <label for=”postal_code”>Postal Code</label>
+  <input type = "number" name="postal_code" minlength="5" ng-model="newRestaurant.restaurant.postal_code"><br>
+
+  <label for=”phone”>Phone Number</label>
+  <input type = "number" name="phone" ng-model="newRestaurant.restaurant.phone"><br>
+
+  <label for=”price”>Price Level 1-4</label>
+  <input type = "number" name="price" min="1" max="4" ng-model="newRestaurant.restaurant.price"><br><br>
+
+  <div ng-if="form.name.$touched">
+    <div ng-if="form.name.$error.required">
+      Please enter a restaurant name!
+    </div>
+    <div ng-if="form.name.$error.minlength">
+      Restaurant name must be more than 2 characters!
+    </div>
+    <div ng-if="form.name.$error.maxlength">
+      Wow that's a long name! Keep it under 20 characters!
+    </div>
+  </div>
+
+  <div ng-if="form.city.$touched">
+    <div ng-if="form.city.$error.required">
+      Please enter a city!
+    </div>
+  </div>
+
+  <div ng-if="form.postalCode.$touched">
+    <div ng-if="form.postalCode.$error.minLength">
+      Postal codes are at least 5 characters long.
+    </div>
+  </div>
+
+  <div ng-if="form.price.$touched">
+    <div ng-if="form.price.$error.min">
+      Enter a price level between 1-4.
+    </div>
+    <div ng-if="form.price.$error.max">
+      Enter a price level between 1-4.
+    </div>
+  </div>
+
+  <input type="submit" value="Add This Restaurant">
+
+</form>

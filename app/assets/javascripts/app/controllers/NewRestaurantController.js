@@ -2,17 +2,17 @@ angular
   .module('openTableApp') 
   .controller('NewRestaurantController', NewRestaurantController); 
 
-function NewRestaurantController(Restaurant, $location, $scope) {
+function NewRestaurantController(Restaurant, $location) {
 
-  $scope.restaurant = new Restaurant();
 
-  $scope.addRestaurant = function() {
-    $scope.restaurant.$save(function() {
+  var ctrl = this;
+
+  ctrl.restaurant = new Restaurant();
+
+  ctrl.addRestaurant = function() {
+    ctrl.restaurant.$save(function(){
       $location.path('restaurants');
     });
   };
-}
 
-// $save() saves an entry. 
-// Assuming $scope.entry is the Entry object  
-// https://www.sitepoint.com/creating-crud-app-minutes-angulars-resource/
+}

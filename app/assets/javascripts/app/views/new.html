@@ -1,7 +1,7 @@
 <h1>Add a New Restaurant </h1>
 <h3>Name and City are required</h3>
 
-<form name="form" ng-submit="newRestaurant.restaurant.addNote()">
+<form name="form"  ng-submit="newRestaurant.addRestaurant()">
 
   <label for=”name”>Name</label>
   <input type = "text" name="name" minLength="2" maxlength="20" required="required" ng-model="newRestaurant.restaurant.name"><br>
@@ -16,8 +16,8 @@
   <label for=”state”>State</label>
   <input type = "text" name="state" ng-model="newRestaurant.restaurant.state"><br>
 
-  <label for=”postalCode”>Postal Code</label>
-  <input type = "number" name="postalCode" minlength="5" ng-model="newRestaurant.restaurant.postalCode"><br>
+  <label for=”postal_code”>Postal Code</label>
+  <input type = "number" name="postal_code" minlength="5" ng-model="newRestaurant.restaurant.postal_code"><br>
 
   <label for=”phone”>Phone Number</label>
   <input type = "number" name="phone" ng-model="newRestaurant.restaurant.phone"><br>
