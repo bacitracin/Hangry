@@ -1,9 +1,13 @@
-<h2>Quick! Where should we eat?</h2><br>
+<h2>Quick! Where should we eat?</h2>
 
-<i><h3>Search {{city}} Restaurants</h3></i>
+<i><h3>Search {{city}} Restaurants</h3></i><hr>
 
-  <h3>Enter Your City for a Suggestion:</h3>
-  <input type="text" ng-model='city' name="city"> <a ui-sref="home.wildcard">Submit</a><br><br><br>
+  <h3>Enter Your City for Suggestions:</h3>
+  <input type="text" ng-model='city' name="city"><br><br>
+  Number of Results:<br>
+  <input type="text" ng-model='numResults' name="numResults"><br>
+
+  <a ui-sref="home.wildcard">Tell me where to eat!</a><br><br><br>
   <a href="#/restaurants">Search all Saved Restaurants</a>
 <br><br>
 

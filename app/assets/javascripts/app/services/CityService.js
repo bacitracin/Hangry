@@ -5,5 +5,6 @@ angular
 function CityService(){
 
   this.city = "San Francisco";
+  this.numResults = 10;
 
 }
