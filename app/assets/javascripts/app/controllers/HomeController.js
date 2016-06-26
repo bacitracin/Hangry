@@ -1,11 +1,11 @@
 openTableApp.controller('HomeController', 
-  ['$scope', 'OpenTableService', 
-  function($scope, OpenTableService){
+  ['$scope', 'CityService', 
+  function($scope, CityService){
 
-    $scope.city = OpenTableService.city; 
+    $scope.city = CityService.city; 
 
     $scope.$watch('city', function(){
-      OpenTableService.city = $scope.city;
+      CityService.city = $scope.city;
     });
 
   }]);

@@ -1,9 +1,10 @@
-<h2>Quick! Where should we eat?</h2>
+<h2>Quick! Where should we eat?</h2><br>
 
-<form>
-  <h3>Enter Your City:</h3>
-  <input type="text" ng-model='city' name="city"><br><br><br>
+<i><h3>Search {{city}} Restaurants</h3></i>
+
+  <h3>Enter Your City for a Suggestion:</h3>
+  <input type="text" ng-model='city' name="city"> <a ui-sref="home.wildcard">Submit</a><br><br><br>
   <a href="#/restaurants">Search all Saved Restaurants</a>
-</form>
-<a ui-sref="home.wildcard">Just Tell me where to eat!</a><br><br>
+<br><br>
+
 <div ui-view></div>

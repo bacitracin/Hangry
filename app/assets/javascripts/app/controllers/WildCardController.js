@@ -1,7 +1,7 @@
-openTableApp.controller('WildCardController', ['$scope', '$resource', 'OpenTableService', 
-  function($scope, $resource, OpenTableService) {
+openTableApp.controller('WildCardController', ['$scope', '$resource', 'CityService', 
+  function($scope, $resource, CityService) {
 
-        $scope.city = OpenTableService.city;
+        $scope.city = CityService.city;
 
         $scope.openTableAPI = $resource
         ('http://opentable.herokuapp.com/api/restaurants?per_page=100' + $scope.city, {
