@@ -41,8 +41,13 @@ GEM
       sprockets (~> 3.0)
       tilt
     arel (6.0.3)
+    autoprefixer-rails (6.3.6.2)
+      execjs
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bootstrap-sass (3.3.6)
+      autoprefixer-rails (>= 5.2.1)
+      sass (>= 3.3.4)
     builder (3.2.2)
     byebug (9.0.5)
     concurrent-ruby (1.0.2)
@@ -139,6 +144,7 @@ PLATFORMS
 
 DEPENDENCIES
   angular-rails-templates
+  bootstrap-sass (~> 3.3.6)
   byebug
   jbuilder (~> 2.0)
   rails (= 4.2.5.1)
