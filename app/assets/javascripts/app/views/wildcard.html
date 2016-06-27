@@ -1,5 +1,9 @@
 <h3>Hungry in {{city}}? Why don't you try... <h3>
 
-<div ng-repeat="restaurant in openTableSearchResult.restaurants">
-  <li>{{ restaurant.name }}</li>
-</div>
+    <div ng-repeat="restaurant in openTableSearchResult.restaurants">
+    <div class="panel panel-default">
+      <div class="panel-body">
+  <p><a href = "{{restaurant.reserve_url}}">{{ restaurant.name }}</a> @ {{restaurant.address}}</p> 
+  <img src="{{restaurant.image_url}}" style="width:304px;height:228px;">
+  </div>
+  </div>
