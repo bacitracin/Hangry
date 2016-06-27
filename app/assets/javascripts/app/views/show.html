@@ -1,28 +1,11 @@
-<h3>{{ showRestaurant.restaurant.name }}</h3>
-<ul>
-  <address>
-  {{ showRestaurant.restaurant.address}} {{ showRestaurant.restaurant.city}} {{ showRestaurant.restaurant.state}} 
-  </address>
-
-    <li><b>Address:</b> {{ showRestaurant.restaurant.address}}</li>
-    <li><b>City:</b> {{ showRestaurant.restaurant.city}}</li>
-    <li><b>State:</b> {{ showRestaurant.restaurant.state}}</li>
 
 
- <li><b>Price Level:</b> {{ showRestaurant.restaurant.price}}</li>
- <li><b>Phone:</b> {{ showRestaurant.restaurant.phone}}</li>
-</ul>
+<h2>{{ showRestaurant.restaurant.name }}</h2><br>
 
+    <h4><b>Address:</b> {{ showRestaurant.restaurant.address}}</h4>
+    <h4><b>City:</b> {{ showRestaurant.restaurant.city}}</h4>
+    <h4><b>State:</b> {{ showRestaurant.restaurant.state}}</h4>
+    <h4><b>Price Level:</b> {{ showRestaurant.restaurant.price}}</h4>
+    <h4><b>Phone:</b> {{ showRestaurant.restaurant.phone}}</h4>
 
-<a href="#" ui-sref="edit({id: showRestaurant.restaurant.id})">Edit</a><br>
-
-<script>
-
-  $(document).ready(function(){
-    $(".address").each(function(){                         
-      var embed ="<iframe width='425' height='350' frameborder='0' scrolling='no'  marginheight='0' marginwidth='0'   src='https://maps.google.com/maps?&amp;q="+ encodeURIComponent( $(this).text() ) +"&amp;output=embed'></iframe>";
-        $(this).html(embed);
-                               
-     });
-  });
-</script>
+<h4><a href="#" ui-sref="edit({id: showRestaurant.restaurant.id})">Edit</a></h4>
