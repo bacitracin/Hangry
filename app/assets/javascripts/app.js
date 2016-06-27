@@ -2,7 +2,7 @@ var openTableApp = angular
                 .module('openTableApp', ['ui.router', 'templates', 'ngResource'])
                 .config(function($stateProvider, $urlRouterProvider){
                   $stateProvider
-                    // Landing page that asks for your city - WORKS
+                    // Landing page that asks for your city
                     .state('home', {
                       url: '/',
                       templateUrl: 'app/views/home.html',
@@ -14,25 +14,25 @@ var openTableApp = angular
                       templateUrl: 'app/views/wildcard.html',
                       controller: 'WildCardController as wildcard'
                     })
-                    // This is all saved restaurants - WORKS
+                    // This is all saved restaurants 
                     .state('restaurants', {
                       url: '/restaurants',
                       templateUrl: 'app/views/restaurants.html',
                       controller: 'RestaurantsController as restaurants'
                     })
-                    // Add a new restaurant - WORKS
+                    // Add a new restaurant 
                     .state('new', {  
                       url: '/new',
                       templateUrl: 'app/views/new.html',
                       controller: 'NewRestaurantController as newRestaurant'
                     })
-                    // Show page - WORKS
+                    // Show page 
                     .state('restaurant', { 
                       url: '/restaurant/:id',
                       templateUrl: 'app/views/show.html',
                       controller: 'ShowRestaurantController as showRestaurant'
                     })
-                    // Edit restaurant details -WORKS
+                    // Edit restaurant details 
                     .state('edit', {
                       url:'/edit/:id',
                       templateUrl: 'app/views/edit.html',

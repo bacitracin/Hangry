@@ -1,16 +1,34 @@
 
 <div class="panel panel-default">
-<div class="panel-body">
-
-<h2>{{ showRestaurant.restaurant.name }}</h2><br>
-
+  <div class="panel-body">
+    <h2>{{ showRestaurant.restaurant.name }}</h2><br>
     <h4><b>Address:</b> {{ showRestaurant.restaurant.address}}</h4>
     <h4><b>City:</b> {{ showRestaurant.restaurant.city}}</h4>
     <h4><b>State:</b> {{ showRestaurant.restaurant.state}}</h4>
     <h4><b>Price Level:</b> {{ showRestaurant.restaurant.price}}</h4>
     <h4><b>Phone:</b> {{ showRestaurant.restaurant.phone}}</h4>
-
-<h4><a href="#" ui-sref="edit({id: showRestaurant.restaurant.id})">Edit</a></h4>
-
+    <h4><a href="#" ui-sref="edit({id: showRestaurant.restaurant.id})">Edit</a></h4>
+  </div>
 </div>
-</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="http://jashkenas.github.com/coffee-script/extras/coffee-script.js"></script>
+<meta charset=utf-8 />
+<title>Welcome to JS Bin</title>
+<meta name="viewport" content="width=device-width">
+<link href='http://fonts.googleapis.com/css?family=Doppio+One' rel='stylesheet' type='text/css'>
+  
+  <address>
+    30 Rockafeller plaza, New Yorkm NY
+  </address>
+
+  <div class="targetdiv"></div>
+<script>
+  $(document).ready(function(){
+    $("address").each(function(){                         
+      var embed ="<iframe width='425' height='350' frameborder='0' scrolling='no'  marginheight='0' marginwidth='0'   src='https://maps.google.com/maps?&amp;q="+ encodeURIComponent( $(".targetdiv").text() ) +"&amp;output=embed'></iframe>";
+      $(".targetdiv").html(embed);
+                               
+     });
+  });
+</script>

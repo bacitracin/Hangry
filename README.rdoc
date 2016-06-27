@@ -1,28 +1,24 @@
-== README
+### openTable / Hangry README
+#### Introduction
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Simple CRUD app for saving restaurant information. Connects to the unofficial OpenTable API to generate restaurant suggestions in your town. 
 
-Things you may want to cover:
+#### Installation
 
-* Ruby version
+Clone this repo down to your local machine. 
 
-* System dependencies
+Use `bower install` and `bundle install` to install dependencies. 
 
-* Configuration
+Use `rake db:create` and `rake db:migrate` to set up the database. 
 
-* Database creation
+#### Run the app
 
-* Database initialization
+You can run the app with the following command: `rails s`. You can then go to your browser and view the application.
 
-* How to run the test suite
+#### How to Contribute
 
-* Services (job queues, cache servers, search engines, etc.)
+Contributions are welcome, especially by beginners. To contribute to this project please fork the [repository](https://github.com/bacitracin/openTable), make changes, and submit a pull request. If you have any questions, feel free to reach out to Tracy @bacitracin. 
 
-* Deployment instructions
+#### License File
 
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+This project uses the MIT License. For more information, please see LICENSE.txt.
