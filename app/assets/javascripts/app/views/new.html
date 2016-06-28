@@ -1,6 +1,9 @@
 <h1>Add a New Restaurant </h1>
-<h3>Name and City are required</h3>
 
+<div class="container">
+<div class="row">
+<div class="col-xs-8 col-sm-6">
+<h3>Name and City are required</h3>
 <form name="form"  ng-submit="newRestaurant.addRestaurant()">
 
   <label for=”name”>Name</label>
@@ -61,3 +64,16 @@
   <input type="submit" class="btn btn-primary" value="Add This Restaurant">
 
 </form>
+</div>
+<div class="col-xs-4 col-sm-6">
+  <h3>Live Preview</h3>
+    {{newRestaurant.restaurant.name}}<br>
+    {{newRestaurant.restaurant.address}}<br>
+    {{newRestaurant.restaurant.city}}<br>
+    {{newRestaurant.restaurant.state}}<br>
+    {{newRestaurant.restaurant.postal_code}}<br>
+    {{newRestaurant.restaurant.phone}}<br>
+    {{newRestaurant.restaurant.price}}<br>
+    </div>
+</div>
+</div>
