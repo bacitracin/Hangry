@@ -1,79 +1,82 @@
 <h1>Add a New Restaurant </h1>
 
 <div class="container">
-<div class="row">
-<div class="col-xs-8 col-sm-6">
-<h3>Name and City are required</h3>
-<form name="form"  ng-submit="newRestaurant.addRestaurant()">
+  <div class="row">
+    <div class="col-xs-8 col-sm-6">
+    <h3>Name and City are required</h3>
+  
+    <form name="form"  ng-submit="newRestaurant.addRestaurant()">
 
-  <label for=”name”>Name</label>
-  <input type = "text" name="name" minLength="2" maxlength="20" required="required" ng-model="newRestaurant.restaurant.name"><br>
+      <label for=”name”>Name</label>
+      <input type = "text" name="name" minLength="2" maxlength="20" required="required" ng-model="newRestaurant.restaurant.name"><br>
 
 
-  <label for=”address”>Address</label>
-  <input type = "text" name="address" ng-model="newRestaurant.restaurant.address"><br>
+      <label for=”address”>Address</label>
+      <input type = "text" name="address" ng-model="newRestaurant.restaurant.address"><br>
 
-  <label for=”city”>City</label>
-  <input type = "text" name="city" required="required" ng-model="newRestaurant.restaurant.city"><br>
+      <label for=”city”>City</label>
+      <input type = "text" name="city" required="required" ng-model="newRestaurant.restaurant.city"><br>
 
-  <label for=”state”>State</label>
-  <input type = "text" name="state" ng-model="newRestaurant.restaurant.state"><br>
+      <label for=”state”>State</label>
+      <input type = "text" name="state" ng-model="newRestaurant.restaurant.state"><br>
 
-  <label for=”postal_code”>Postal Code</label>
-  <input type = "number" name="postal_code" minlength="5" ng-model="newRestaurant.restaurant.postal_code"><br>
+      <label for=”postal_code”>Postal Code</label>
+      <input type = "number" name="postal_code" minlength="5" ng-model="newRestaurant.restaurant.postal_code"><br>
 
-  <label for=”phone”>Phone Number</label>
-  <input type = "number" name="phone" ng-model="newRestaurant.restaurant.phone"><br>
+      <label for=”phone”>Phone Number</label>
+      <input type = "number" name="phone" ng-model="newRestaurant.restaurant.phone"><br>
 
-  <label for=”price”>Price Level 1-4</label>
-  <input type = "number" name="price" min="1" max="4" ng-model="newRestaurant.restaurant.price"><br><br>
+      <label for=”price”>Price Level 1-4</label>
+      <input type = "number" name="price" min="1" max="4" ng-model="newRestaurant.restaurant.price"><br><br>
 
-  <div ng-if="form.name.$touched">
-    <div ng-if="form.name.$error.required">
-      Please enter a restaurant name!
+      <div ng-if="form.name.$touched">
+        <div ng-if="form.name.$error.required">
+          Please enter a restaurant name!
+        </div>
+        <div ng-if="form.name.$error.minlength">
+          Restaurant name must be more than 2 characters!
+        </div>
+        <div ng-if="form.name.$error.maxlength">
+          Wow that's a long name! Keep it under 20 characters!
+        </div>
+      </div>
+
+      <div ng-if="form.city.$touched">
+        <div ng-if="form.city.$error.required">
+          Please enter a city!
+        </div>
+      </div>
+
+      <div ng-if="form.postal_code.$touched">
+        <div ng-if="form.postal_code.$error.minLength">
+          Postal codes are at least 5 characters long.
+        </div>
+      </div>
+
+      <div ng-if="form.price.$touched">
+        <div ng-if="form.price.$error.min">
+          Enter a price level between 1-4.
+        </div>
+        <div ng-if="form.price.$error.max">
+          Enter a price level between 1-4.
+        </div>
+      </div>
+
+      <input type="submit" class="btn btn-primary" value="Add This Restaurant">
+
+    </form>
     </div>
-    <div ng-if="form.name.$error.minlength">
-      Restaurant name must be more than 2 characters!
+
+    <div class="col-xs-4 col-sm-6">
+      <h3>Live Preview</h3>
+        {{newRestaurant.restaurant.name}}<br>
+        {{newRestaurant.restaurant.address}}<br>
+        {{newRestaurant.restaurant.city}}<br>
+        {{newRestaurant.restaurant.state}}<br>
+        {{newRestaurant.restaurant.postal_code}}<br>
+        {{newRestaurant.restaurant.phone}}<br>
+        {{newRestaurant.restaurant.price}}<br>
     </div>
-    <div ng-if="form.name.$error.maxlength">
-      Wow that's a long name! Keep it under 20 characters!
-    </div>
+    
   </div>
-
-  <div ng-if="form.city.$touched">
-    <div ng-if="form.city.$error.required">
-      Please enter a city!
-    </div>
-  </div>
-
-  <div ng-if="form.postal_code.$touched">
-    <div ng-if="form.postal_code.$error.minLength">
-      Postal codes are at least 5 characters long.
-    </div>
-  </div>
-
-  <div ng-if="form.price.$touched">
-    <div ng-if="form.price.$error.min">
-      Enter a price level between 1-4.
-    </div>
-    <div ng-if="form.price.$error.max">
-      Enter a price level between 1-4.
-    </div>
-  </div>
-
-  <input type="submit" class="btn btn-primary" value="Add This Restaurant">
-
-</form>
-</div>
-<div class="col-xs-4 col-sm-6">
-  <h3>Live Preview</h3>
-    {{newRestaurant.restaurant.name}}<br>
-    {{newRestaurant.restaurant.address}}<br>
-    {{newRestaurant.restaurant.city}}<br>
-    {{newRestaurant.restaurant.state}}<br>
-    {{newRestaurant.restaurant.postal_code}}<br>
-    {{newRestaurant.restaurant.phone}}<br>
-    {{newRestaurant.restaurant.price}}<br>
-    </div>
-</div>
 </div>

@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>OpenTable</title>
-  <%= javascript_include_tag 'application' %>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= csrf_meta_tags %>
-</head>
-<body ng-app='openTableApp'>
-<h1>Hangry!!!</h1><hr>
+  <head>
+    <title>OpenTable</title>
+    <%= javascript_include_tag 'application' %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= csrf_meta_tags %>
+  </head>
 
-<ui-view></ui-view>
+  <body ng-app='openTableApp'>
 
-</body>
+  <h1>Hangry!!!</h1><hr>
+
+  <ui-view></ui-view>
+
+  </body>
+
 </html>

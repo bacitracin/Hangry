@@ -1,5 +1,4 @@
-// factory for resource
-
+// Restaurant Factory
 angular
   .module('openTableApp')
   .factory('Restaurant', Restaurant)

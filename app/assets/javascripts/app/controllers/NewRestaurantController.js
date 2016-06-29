@@ -4,7 +4,6 @@ angular
 
 function NewRestaurantController(Restaurant, $location) {
 
-
   var newRestaurant = this;
 
   newRestaurant.restaurant = new Restaurant();

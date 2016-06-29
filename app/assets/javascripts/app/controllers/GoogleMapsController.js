@@ -1,3 +1,4 @@
+// Maps Controller code from example, not working yet
 openTableApp.controller("GoogleMapsController", function($scope, uiGmapGoogleMapApi) {
     
     // Do stuff with your $scope.

@@ -15,4 +15,4 @@ function RestaurantsController(Restaurant, $location, $state) {
   //    $state.go($state.current, {}, {reload: true});
   //  });
   //}
-};
+}
