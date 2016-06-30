@@ -2,15 +2,11 @@ angular
   .module('openTableApp')
   .controller('WildCardController', WildCardController);
 
-function WildCardController($scope, $resource, CityService){
+function WildCardController($scope, CityService, OpenTableService){
 
   $scope.city = CityService.city;
   $scope.numResults = CityService.numResults;
 
-  $scope.openTableAPI = $resource('http://opentable.herokuapp.com/api/restaurants', {
-    callback: "JSON_CALLBACK" }, {get: {method: "JSONP" }});
-
-  $scope.openTableSearchResult = $scope.openTableAPI.get(
-    {city: $scope.city, per_page: $scope.numResults});
+  $scope.openTableSearchResult = OpenTableService.getResults($scope.city, $scope.numResults);
 
 }

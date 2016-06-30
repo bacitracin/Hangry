@@ -7,7 +7,7 @@ function HomeController($scope, CityService) {
   $scope.city = CityService.city;
   $scope.numResults = CityService.numResults;
 
-  // Can change this to Watchcollection to watch both
+  // Will Watchcollection watch both??
   $scope.$watch('city', function(){
     CityService.city = $scope.city;
   });
