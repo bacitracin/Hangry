@@ -8,7 +8,7 @@ var openTableApp = angular
                       templateUrl: 'app/views/home.html',
                       controller: 'HomeController as home'
                     })
-                    // Hits Unofficial OpenTable API and randomly pulls a restaurant
+                    // Hits Unofficial OpenTable API and pulls restaurant results
                     .state('home.wildcard', {
                       url: 'wildcard',
                       templateUrl: 'app/views/wildcard.html',

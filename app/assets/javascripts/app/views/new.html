@@ -29,6 +29,8 @@
       <label for=”price”>Price Level 1-4</label>
       <input type = "number" name="price" min="1" max="4" ng-model="newRestaurant.restaurant.price"><br><br>
 
+
+      <!-- Could try to do ngMessages instead -->
       <div ng-if="form.name.$touched">
         <div ng-if="form.name.$error.required">
           Please enter a restaurant name!
