@@ -1,5 +1,5 @@
 var openTableApp = angular
-                .module('openTableApp', ['ui.router', 'templates', 'ngResource'])
+                .module('openTableApp', ['ui.router', 'templates', 'ngResource', 'ngMessages'])
                 .config(function($stateProvider, $urlRouterProvider){
                   $stateProvider
                     // Landing page that asks for your city

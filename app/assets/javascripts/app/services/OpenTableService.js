@@ -13,3 +13,8 @@ function OpenTableService($resource){
     return openTableAPI.get({city: city, per_page: numResults});
   }
 }
+// https://en.wikipedia.org/wiki/JSONP - Its a way to safely request data from a different server.
+
+
+
+//JSONP (JSON with Padding or JSON-P[1]) is a technique used by web developers to overcome the cross-domain restrictions imposed by browsers' same-origin policy that limits access to resources retrieved from origins other than the one the page was served by.
