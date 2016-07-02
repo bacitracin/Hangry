@@ -6,8 +6,6 @@
 Search by: <input type="text" placeholder="Name" ng-model="searchRestaurants.name"/> or <input type="text" placeholder="City" ng-model="searchRestaurants.city" /><br><br>
 
   <div class="panel panel-default" ng-repeat="restaurant in restaurants.restaurants | orderBy: 'name' | filter: searchRestaurants">
-    <div class="panel-body">
-      <a href="#" ui-sref="restaurant({id: restaurant.id})">{{ restaurant.name}} </a> - {{ restaurant.city }} - <a href="#" ui-sref="edit({id: restaurant.id})">Edit Details</a>
-    </div>
+    <restaurant-result></restaurant-result>
   </div>
 
