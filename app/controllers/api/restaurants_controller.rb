@@ -37,20 +37,8 @@ module Api
       private 
 
         def restaurant_params 
-          params.require(:restaurant).permit(:ot_id, :name, :address, :city, :state, :postal_code,
-          :image, :reserve_url, :price) 
+          params.require(:restaurant).permit(:ot_id, :name, :address, :city, :state, :postal_code, :phone, :image_url, :reserve_url, :price)
         end 
     end 
 
 end
-
-
-
-
-
-
-
-
-
-
-
