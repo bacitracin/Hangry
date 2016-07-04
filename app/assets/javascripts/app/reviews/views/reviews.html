@@ -4,9 +4,9 @@
 <h2>Your Reviews</h2>
 
   <div class="panel panel-default" ng-repeat="review in reviews.reviews">
-    <li>{{ reviews.review.review_title }}</li>
-    <li>{{ reviews.review.review_text }}</li>
-    <li>{{ reviews.review.review_score }}</li>
+    <li>Title: {{ reviews.review.review_title }}</li>
+    <li>Text: {{ reviews.review.review_text }}</li>
+    <li>Score:{{ reviews.review.review_score }}</li>
     <a href="#" ui-sref="edit({id: reviews.review.id})">Edit</a>
   </div>
 

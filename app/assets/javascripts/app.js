@@ -46,20 +46,20 @@ var openTableApp = angular
                       controller: 'ReviewsController as reviews'
                     })
                     // TO ADD Reviews NEW
-                    .state('reviews.new', {
-                      url:'new',
+                    .state('new_review', {
+                      url:'/reviews/new',
                       templateUrl: 'app/reviews/views/new.html',
                       controller: 'NewReviewController as newReview'
                     })
                     // TO ADD Reviews SHOW
-                    .state('reviews.show', {
-                      url:':id',
+                    .state('show_review', {
+                      url:'/reviews/:id',
                       templateUrl: 'app/reviews/views/show.html',
                       controller: 'ShowReviewController as showReview'
                     })
                     // TO ADD Reviews EDIT
-                    .state('reviews.edit', {
-                      url:'edit/:id',
+                    .state('edit_review', {
+                      url:'/reviews/edit/:id',
                       templateUrl: 'app/reviews/views/edit.html',
                       controller: 'EditReviewController as editReview'
                     })
