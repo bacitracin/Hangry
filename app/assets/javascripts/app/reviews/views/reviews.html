@@ -5,6 +5,10 @@
 
   <div class="panel panel-default" ng-repeat="review in reviews.reviews">
     <div class="panel-body">
+    <!-- This doesn't work yet
+    <li>Restaurant: {{reviews.review.restaurant.name}}</li>
+    -->
+
     <li>Title: {{ reviews.review.review_title }}</li>
     <li>Text: {{ reviews.review.review_text }}</li>
     <li>Score:{{ reviews.review.review_score }}</li>
