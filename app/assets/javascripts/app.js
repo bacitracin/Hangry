@@ -21,22 +21,47 @@ var openTableApp = angular
                       controller: 'RestaurantsController as restaurants'
                     })
                     // Add a new restaurant 
-                    .state('new', {  
+                    .state('new', {   // change to restaurants.new
                       url: '/new',
                       templateUrl: 'app/restaurants/views/new.html',
                       controller: 'NewRestaurantController as newRestaurant'
                     })
                     // Show page 
-                    .state('restaurant', { 
+                    .state('restaurant', {  // change to restaurants.show
                       url: '/restaurant/:id',
                       templateUrl: 'app/restaurants/views/show.html',
                       controller: 'ShowRestaurantController as showRestaurant'
                     })
-                    // Edit restaurant details 
-                    .state('edit', {
+                    // Edit restaurant details
+                    .state('edit', { // change to restaurants.edit
                       url:'/edit/:id',
                       templateUrl: 'app/restaurants/views/edit.html',
                       controller: 'EditRestaurantController as editRestaurant'
+                    })
+
+                    // TO ADD Reviews User INDEX
+                    .state('reviews', {
+                      url:'/reviews',
+                      templateUrl: 'app/reviews/views/index.html',
+                      controller: 'ReviewsController as reviews'
+                    })
+                    // TO ADD Reviews NEW
+                    .state('reviews.new', {
+                      url:'new',
+                      templateUrl: 'app/reviews/views/new.html',
+                      controller: 'NewReviewController as newReview'
+                    })
+                    // TO ADD Reviews SHOW
+                    .state('reviews.show', {
+                      url:':id',
+                      templateUrl: 'app/reviews/views/show.html',
+                      controller: 'ShowReviewController as showReview'
+                    })
+                    // TO ADD Reviews EDIT
+                    .state('reviews.edit', {
+                      url:'edit/:id',
+                      templateUrl: 'app/reviews/views/edit.html',
+                      controller: 'EditReviewController as editReview'
                     })
 
                     // Devise - Login
