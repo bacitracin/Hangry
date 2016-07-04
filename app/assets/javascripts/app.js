@@ -42,7 +42,7 @@ var openTableApp = angular
                     // TO ADD Reviews User INDEX
                     .state('reviews', {
                       url:'/reviews',
-                      templateUrl: 'app/reviews/views/index.html',
+                      templateUrl: 'app/reviews/views/reviews.html',
                       controller: 'ReviewsController as reviews'
                     })
                     // TO ADD Reviews NEW

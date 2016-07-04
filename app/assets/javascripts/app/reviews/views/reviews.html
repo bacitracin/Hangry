@@ -1,0 +1,12 @@
+<a href="#">Home</a><br>
+<a href="#/reviews/new">Add New Review</a> 
+
+<h2>Saved Reviews</h2>
+
+  <div class="panel panel-default" ng-repeat="review in reviews.reviews">
+    <li>{{ reviews.review.review_title }}</li>
+    <li>{{ reviews.review.review_text }}</li>
+    <li>{{ reviews.review.review_score }}</li>
+    <a href="#" ui-sref="edit({id: reviews.review.id})">Edit</a>
+  </div>
+

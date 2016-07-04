@@ -1,6 +1,6 @@
 class ReviewsController < ApplicationController 
 
-  before_filter :authenticate_user!, only: [:create, :destroy, :edit, :update]
+  before_filter :authenticate_user!, only: [:create, :destroy, :update]
   respond_to :json
 
   def index
