@@ -20,7 +20,8 @@ ActiveRecord::Schema.define(version: 20160703234858) do
     t.string   "city"
     t.string   "state"
     t.string   "postal_code"
-    t.string   "image"
+    t.string   "phone"
+    t.string   "image_url"
     t.string   "reserve_url"
     t.integer  "price"
     t.datetime "created_at",  null: false
