@@ -1,4 +1,6 @@
 class Review < ActiveRecord::Base
+  
   belongs_to :resturant
-  #belong_to :user
+  belongs_to :user
+
 end
