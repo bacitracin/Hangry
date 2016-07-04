@@ -14,9 +14,18 @@
   <body ng-app='openTableApp'>
 
   <h1>Hangry!!!</h1><hr>
-
-  <ui-view></ui-view>
-
+  <!-- Could do ng-include - clean up later <div ng-include="'nav/_nav.html'"></div> -->
+  <div class="col-md-6 col-md-offset-3">
+     <div class="collapse navbar-collapse pull-right" ng-controller="NavController">
+       <ul class="nav navbar-nav">
+         <li><a href="#">Home</a></li>
+         <li ng-hide="signedIn()"><a href="#/login">Log In</a></li>
+         <li ng-hide="signedIn()"><a href="#/register">Register</a></li>
+         <li ng-show="signedIn()"><a href="#/">{{ user.username }}</a></li>
+         <li ng-show="signedIn()"><a ng-click="logout()">Log Out</a></li>
+       </ul>
+     </div>
+     <ui-view></ui-view>
   </body>
 
 </html>

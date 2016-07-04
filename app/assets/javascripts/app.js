@@ -38,7 +38,24 @@ var openTableApp = angular
                       templateUrl: 'app/restaurants/views/edit.html',
                       controller: 'EditRestaurantController as editRestaurant'
                     })
-
+                    // Devise - Login
+                    //.state('login', {
+                    //  url: '/login',
+                    //  templateUrl: 'app/auth/_login.html',
+                    //  controller: 'AuthCtrl',
+                    //  onEnter: ['$state', 'Auth', function($state, Auth) {
+                    //     Auth.currentUser().then(function (){
+                    //       $state.go('home');
+                    //})
+                    // Devise - Register
+                    //.state('register', {
+                    //  url: '/register',
+                    //  templateUrl: 'app/auth/_register.html',
+                    //  controller: 'AuthCtrl',
+                    //  onEnter: ['$state', 'Auth', function($state, Auth) {
+                    //     Auth.currentUser().then(function (){
+                    //       $state.go('home');
+                    //})
                     // Defaults to home
                       $urlRouterProvider.otherwise('/');
                 });
