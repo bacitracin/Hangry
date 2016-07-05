@@ -1,10 +1,10 @@
-<h1>Write a review</h1>
+<h1>Edit Your Review</h1>
 
 <div class="container">
   <div class="row">
     <div class="col-xs-8 col-sm-6">
   
-    <form name="form"  ng-submit="newReview.addReview()">
+    <form name="form"  ng-submit="editReview.editReview()">
 
       <label for=”review_title”>Review Title</label><br>
       <input type = "text" name="review_title" minLength="10" required="required" ng-model="newReview.review.review_title"><br>
@@ -37,14 +37,6 @@
       <input type="submit" class="btn btn-primary" value="Submit">
 
     </form>
-    </div>
-
-    <div class="col-xs-4 col-sm-6">
-      <h3>Live Preview</h3>
-        {{newReview.review.review_title}}<br>
-        {{newReview.review.review_date}}<br>
-        {{newReview.review.review_text}}<br>
-        {{newReview.review.review_score}}<br>
     </div>
     
   </div>

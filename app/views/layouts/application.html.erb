@@ -21,6 +21,7 @@
          <li ng-hide="signedIn()"><a href="#/login">Log In</a></li>
          <li ng-hide="signedIn()"><a href="#/register">Register</a></li>
          <li ng-show="signedIn()"><a href="#/">{{ user.username }}</a></li>
+         <li ng-show="signedIn()"><a href="#/reviews">Your Reviews</a></li>
          <li ng-show="signedIn()"><a ng-click="logout()">Log Out</a></li>
        </ul><br>
      </div>

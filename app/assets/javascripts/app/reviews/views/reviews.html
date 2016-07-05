@@ -1,7 +1,5 @@
-<a href="#">Home</a><br>
-<a href="#/reviews/new">Add New Review</a> 
-
 <h2>Your Reviews</h2>
+<a href="#/reviews/new">Add New Review</a> <br><br>
 
   <div class="panel panel-default" ng-repeat="review in reviews.reviews">
     <div class="panel-body">
@@ -9,10 +7,11 @@
     <li>Restaurant: {{reviews.review.restaurant.name}}</li>
     -->
 
-    <li>Title: {{ reviews.review.review_title }}</li>
-    <li>Text: {{ reviews.review.review_text }}</li>
-    <li>Score:{{ reviews.review.review_score }}</li>
-    <a href="#" ui-sref="edit({id: reviews.review.id})">Edit</a>
+    <h3>{{ review.review_title}}</h3>
+    <p>{{ review.review_date }}</p><br>
+    <p>{{ review.review_text }}</p><br>
+    <p>Rating: {{ review.review_score }}/5</p>
+    <a href="#" ui-sref="editreview({id: reviews.review.id})">Edit</a>
     </div>
   </div>
 
