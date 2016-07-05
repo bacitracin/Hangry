@@ -3,15 +3,14 @@
 
   <div class="panel panel-default" ng-repeat="review in reviews.reviews">
     <div class="panel-body">
-    <!-- This doesn't work yet
-    <li>Restaurant: {{reviews.review.restaurant.name}}</li>
-    -->
 
     <h3>{{ review.review_title}}</h3>
+    <p>Restaurant: {{reviews.review.restaurant.name}}</p>
     <p>{{ review.review_date }}</p><br>
     <p>{{ review.review_text }}</p><br>
     <p>Rating: {{ review.review_score }}/5</p>
-    <a href="#" ui-sref="editreview({id: reviews.review.id})">Edit</a>
+    <a href="#" ui-sref="editreview({id: review.id})">Edit Details</a></div>
+
     </div>
   </div>
 
