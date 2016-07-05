@@ -4,14 +4,17 @@
     <div class="panel panel-default">
       <div class="panel-body">
         <div class="col-sm-6">
+
          <p><a href = "{{restaurant.reserve_url}}">{{ restaurant.name }}</a></p>
          <p>{{restaurant.address}}</p>
          <p>{{restaurant.city}}, {{restaurant.state}} {{restaurant.postal_code}}</p>
+         <a ng-click="saveRestaurant()">Save To Your List</a>
         </div>
        
         <div class="col-sm-6">
           <img src="{{restaurant.image_url}}" style="width:304px;height:228px;">
         </div>
+
      </div>
     </div>
   </div>
