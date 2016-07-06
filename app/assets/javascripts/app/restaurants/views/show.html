@@ -3,6 +3,7 @@
     <div class="col-xs-8 col-sm-6">
       <div class="panel panel-default">
         <div class="panel-body">
+
           <h2>{{ showRestaurant.restaurant.name }}</h2><br>
           <h4><b>Address:</b> {{ showRestaurant.restaurant.address}}</h4>
           <h4><b>City:</b> {{ showRestaurant.restaurant.city}}</h4>
@@ -11,7 +12,7 @@
           <h4><b>Price Level:</b> {{ showRestaurant.restaurant.price}}</h4>
           <h4><b>Phone:</b> {{ showRestaurant.restaurant.phone}}</h4>
           <h4><a href="#" ui-sref="edit({id: showRestaurant.restaurant.id})">Edit</a></h4>
-          <a href="#/reviews/new">Been Here? Write a review</a> <br><br>
+          <a href="#/reviews/new" ng-click="showRestaurant.updateScope()">Been Here? Write a review</a> <br><br>
         </div>
       </div>
     </div>

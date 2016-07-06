@@ -8,10 +8,10 @@ function ShowRestaurantController(Restaurant, $stateParams, $scope, RestaurantSe
 
   showRestaurant.restaurant = Restaurant.get({ id: $stateParams.id });
 
-  $scope.restaurantForReview = showRestaurant.restaurant;
-
-  $scope.$watch('restaurantForReview', function(){
-    RestaurantService.restaurantForReview = $scope.restaurantForReview;
-  });
+  $scope.selectedRestaurant = showRestaurant.restaurant;
+  
+  showRestaurant.updateScope = function(){
+    RestaurantService.selectedRestaurant = $scope.selectedRestaurant;
+  }
   
 }
