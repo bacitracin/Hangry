@@ -9,10 +9,8 @@
       <label for=”review_title”>Review Title</label><br>
       <input type = "text" name="review_title" minLength="10" required="required" ng-model="newReview.review.review_title"><br>
 
-      {{ newReview.review.restaurant.name}}
-
       <label for=”review_restaurant”>Restaurant Name</label><br>
-      <input type = "text" name="review_restaurant" ng-model="newReview.review.restaurant_id"><br>
+      <input type = "text" name="review_restaurant" ng-model="newReview.review.restaurant.name"><br>
 
       <label for=”review_date”>Date</label><br>
       <input type = "date" name="review_date" ng-model="newReview.review.review_date"><br>
@@ -42,14 +40,6 @@
       <input type="submit" class="btn btn-primary" value="Submit">
 
     </form>
-    </div>
-
-    <div class="col-xs-4 col-sm-6">
-      <h3>Live Preview</h3>
-        {{newReview.review.review_title}}<br>
-        {{newReview.review.review_date}}<br>
-        {{newReview.review.review_text}}<br>
-        {{newReview.review.review_score}}<br>
     </div>
     
   </div>
