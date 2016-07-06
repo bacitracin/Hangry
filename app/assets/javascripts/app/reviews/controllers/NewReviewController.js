@@ -2,7 +2,9 @@ angular
   .module('openTableApp') 
   .controller('NewReviewController', NewReviewController); 
 
-function NewReviewController(Review, $location) {
+function NewReviewController(Review, $location, $scope, RestaurantService) {
+
+  $scope.restaurantForReview = RestaurantService.restaurantForReview;
 
   var newReview = this;
 
