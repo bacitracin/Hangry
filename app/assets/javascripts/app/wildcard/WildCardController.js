@@ -8,5 +8,5 @@ function WildCardController($scope, CityService, OpenTableService){
   $scope.numResults = CityService.numResults;
 
   $scope.openTableSearchResult = OpenTableService.getResults($scope.city, $scope.numResults);
-}
 
+}

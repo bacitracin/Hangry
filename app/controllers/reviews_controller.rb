@@ -8,9 +8,12 @@ class ReviewsController < ApplicationController
   end
 
   def create 
+
     @review = Review.new(review_params)
-    @review.user_id = current_user.id
+    @review.user_id = current_user.id #could do build
+
     #add in restaurant id 
+    # @review.restaurant_id = @restaurant.id
     if @review.save 
       respond_to do |format|
         format.json { render :json => @review }
