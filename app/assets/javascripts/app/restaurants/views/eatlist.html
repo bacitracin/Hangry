@@ -1,0 +1,6 @@
+<h2>Places You've Eaten</h2> 
+
+  <div class="panel panel-default" ng-repeat="restaurant in eatlist.restaurants | orderBy: 'name' | filter: searchRestaurants">
+    <restaurant-result></restaurant-result>
+  </div>
+

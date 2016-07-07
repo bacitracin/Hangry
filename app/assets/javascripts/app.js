@@ -48,6 +48,12 @@ var openTableApp = angular
                       templateUrl: 'app/reviews/views/reviews.html',
                       controller: 'ReviewsController as reviews'
                     })
+                    // Eat List
+                    .state('eatlist', {
+                      url:'/eatlist',
+                      templateUrl:'app/restaurants/views/eatlist.html', //?????
+                      controller:'EatListController as eatlist' // ????
+                    })
                     // Reviews NEW
                     .state('newreview', {
                       url:'/reviews/new',
