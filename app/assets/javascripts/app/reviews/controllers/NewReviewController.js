@@ -9,8 +9,7 @@ function NewReviewController(Review, $location, $scope, RestaurantService) {
   newReview.review = new Review();
 
   newReview.review.restaurant = RestaurantService.selectedRestaurant;
-  //newReview.review.restaurant.restaurant_id = RestaurantService.selectedRestaurant.id;
-
+  
   newReview.addReview = function() {
     newReview.review.$save(function(){
       $location.path('reviews');
