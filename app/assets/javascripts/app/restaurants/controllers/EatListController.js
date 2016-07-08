@@ -4,9 +4,9 @@ angular
 
 function EatListController(Restaurant, $state, $scope) {
   
-  var eatlist = this; 
+  var eatList = this; 
 
-  eatlist.restaurants = Restaurant.query();
+  eatList.restaurants = Restaurant.query();
 
-  }
 };
+

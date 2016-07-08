@@ -41,7 +41,6 @@ var openTableApp = angular
                       templateUrl: 'app/restaurants/views/edit.html',
                       controller: 'EditRestaurantController as editRestaurant'
                     })
-
                     // Reviews User INDEX
                     .state('reviews', {
                       url:'/reviews',
@@ -52,7 +51,7 @@ var openTableApp = angular
                     .state('eatlist', {
                       url:'/eatlist',
                       templateUrl:'app/restaurants/views/eatlist.html', 
-                      controller:'EatListController as eatlist' 
+                      controller:'EatListController as eatList' 
                     })
                     // Reviews NEW
                     .state('newreview', {
