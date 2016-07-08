@@ -2,13 +2,15 @@ angular
   .module('openTableApp') 
   .controller('EatListController', EatListController);
 
-function EatListController(Restaurant, RestaurantService, $scope) {
+function EatListController(Restaurant, RestaurantService, $scope, Auth) {
   
   var eatlist = this; 
 
-  eatlist.restaurants = Restaurant.query();
-  
-  eatlist.updateScope = function(){
-    RestaurantService.selectedRestaurant = {};
+  Auth.currentUser().then(function (user){
+    $scope.user = user;
+  });
+
+  eatlist.restaurants = currentUser.visited_restaurants;
+
   }
 };

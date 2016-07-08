@@ -5,7 +5,12 @@ module Api
       respond_to :json 
 
       def index 
-        respond_with(Restaurant.all.order("id DESC"))
+        if params["eatlist"]
+          @restaurants = current_user.visited_restaurants
+        else
+          @restaurants = Restaurant.all
+        end
+        respond_with(@restaurants)
       end 
 
       def show 
