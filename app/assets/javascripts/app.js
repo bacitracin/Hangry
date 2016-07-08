@@ -24,13 +24,13 @@ var openTableApp = angular
                       controller: 'RestaurantsController as restaurants'
                     })
                     // Add a new restaurant 
-                    .state('restaurants.new', {   // change to restaurants.new
+                    .state('restaurants.new', {   
                       url: '/new',
                       templateUrl: 'app/restaurants/views/new.html',
                       controller: 'NewRestaurantController as newRestaurant'
                     })
                     // Show page 
-                    .state('restaurant', {  // change to restaurants.show
+                    .state('restaurant.show', {  // change to restaurants.show
                       url: '/restaurant/:id',
                       templateUrl: 'app/restaurants/views/show.html',
                       controller: 'ShowRestaurantController as showRestaurant'
@@ -55,8 +55,8 @@ var openTableApp = angular
                       controller:'EatListController as eatlist' // ????
                     })
                     // Reviews NEW
-                    .state('newreview', {
-                      url:'/reviews/new',
+                    .state('reviews.new', {
+                      url:'/new',
                       templateUrl: 'app/reviews/views/new.html',
                       controller: 'NewReviewController as newReview'
                     })
@@ -85,6 +85,6 @@ var openTableApp = angular
                       controller: 'AuthCtrl'//,
                     })
                     // Defaults to home
-                      $urlRouterProvider.otherwise('/');
+                    $urlRouterProvider.otherwise('/');
                 });
 
