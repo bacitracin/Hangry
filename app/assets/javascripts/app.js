@@ -24,7 +24,7 @@ var openTableApp = angular
                       controller: 'RestaurantsController as restaurants'
                     })
                     // Add a new restaurant 
-                    .state('new', {   // change to restaurants.new
+                    .state('restaurants.new', {   // change to restaurants.new
                       url: '/new',
                       templateUrl: 'app/restaurants/views/new.html',
                       controller: 'NewRestaurantController as newRestaurant'

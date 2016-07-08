@@ -1,10 +1,12 @@
-<h2>All Saved Restaurants</h2> 
-<a href="#/new">Add New Restaurant</a> <br><br>
+<div ui-view>
 
+  <h2>All Saved Restaurants</h2> 
+  <a href="#/restaurants/new">Add New Restaurant</a> <br><br>
 
-Search by: <input type="text" placeholder="Name" ng-model="searchRestaurants.name"/> or <input type="text" placeholder="City" ng-model="searchRestaurants.city" /><br><br>
+  Search by: <input type="text" placeholder="Name" ng-model="searchRestaurants.name"/> or <input type="text" placeholder="City" ng-model="searchRestaurants.city" /><br><br>
 
   <div class="panel panel-default" ng-repeat="restaurant in restaurants.restaurants | orderBy: 'name' | filter: searchRestaurants">
     <restaurant-result></restaurant-result>
   </div>
 
+</div>
