@@ -1,3 +1,4 @@
+module Api
 class ReviewsController < ApplicationController 
 
   before_filter :authenticate_user!, only: [:create, :destroy, :update]
@@ -45,6 +46,5 @@ class ReviewsController < ApplicationController
     params.require(:review).permit(:user_id, :username, :restaurant_id, :review_text, :review_date, :review_score, :review_title, 
       :restaurant_name, :restaurant, :ot_id, :id, :state, :city, :address, :postal_code, :phone, :image_url, :reserve_url, :price )
   end 
-
 end
-
+end

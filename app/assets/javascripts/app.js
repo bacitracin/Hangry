@@ -24,19 +24,19 @@ var openTableApp = angular
                       controller: 'RestaurantsController as restaurants'
                     })
                     // Add a new restaurant 
-                    .state('new', {   // change to restaurants.new
+                    .state('new', {  
                       url: '/new',
                       templateUrl: 'app/restaurants/views/new.html',
                       controller: 'NewRestaurantController as newRestaurant'
                     })
                     // Show page 
-                    .state('restaurant', {  // change to restaurants.show
+                    .state('restaurant', { 
                       url: '/restaurant/:id',
                       templateUrl: 'app/restaurants/views/show.html',
                       controller: 'ShowRestaurantController as showRestaurant'
                     })
                     // Edit restaurant details
-                    .state('edit', { // change to restaurants.edit
+                    .state('edit', { 
                       url:'/edit/:id',
                       templateUrl: 'app/restaurants/views/edit.html',
                       controller: 'EditRestaurantController as editRestaurant'
@@ -51,8 +51,8 @@ var openTableApp = angular
                     // Eat List
                     .state('eatlist', {
                       url:'/eatlist',
-                      templateUrl:'app/restaurants/views/eatlist.html', //?????
-                      controller:'EatListController as eatlist' // ????
+                      templateUrl:'app/restaurants/views/eatlist.html', 
+                      controller:'EatListController as eatlist' 
                     })
                     // Reviews NEW
                     .state('newreview', {
