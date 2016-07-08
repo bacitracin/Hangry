@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20160703234858) do
 
   create_table "reviews", force: :cascade do |t|
     t.integer "user_id"
+    t.string  "username"
     t.integer "restaurant_id"
     t.string  "restaurant_name"
     t.text    "review_text"

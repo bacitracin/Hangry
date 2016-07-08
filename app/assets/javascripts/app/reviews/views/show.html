@@ -5,8 +5,8 @@
         <div class="panel-body">
           <h2>{{ showReview.review.review_title }}</h2>
           <h4>{{ showReview.review.review_date}}</h4>
-          <!-- Need to add name
-          <h4>{{ showReview.review.restaurant.name}}</h4> -->
+          <h4>{{ showReview.review.username}}</h4>
+          <h4>{{ showReview.review.restaurant_name}}
           <h4>{{ showReview.review.review_text }}</h4>
           <h4>Score: {{ showReview.review.review_score }}/5</h4>
           <h4><a href="#" ui-sref="editreview({id: showReview.review.id})">Edit</a></h4>

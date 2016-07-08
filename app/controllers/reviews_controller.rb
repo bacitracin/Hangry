@@ -8,11 +8,12 @@ class ReviewsController < ApplicationController
   end
 
   def create 
-
     @review = Review.create(review_params)
     @review.user_id = current_user.id
+    @review.username = current_user.username
     @restaurant = Restaurant.find_by(:name => params[:restaurant][:name])
     @review.restaurant_id = @restaurant.id
+    @review.restaurant_name = @restaurant.name
 
     if @review.save 
       respond_to do |format|
@@ -22,10 +23,7 @@ class ReviewsController < ApplicationController
   end 
 
   def show
-    #@review = Review.find(params[:id])
-    #@review.restaurant_id
     respond_with(Review.find(params[:id]))
-    #respond_with(Restaurant.find(@review.restaurant_id))
   end
 
   def update 
@@ -44,7 +42,7 @@ class ReviewsController < ApplicationController
   private 
 
   def review_params 
-    params.require(:review).permit(:user_id, :restaurant_id, :review_text, :review_date, :review_score, :review_title, 
+    params.require(:review).permit(:user_id, :username, :restaurant_id, :review_text, :review_date, :review_score, :review_title, 
       :restaurant_name, :restaurant, :ot_id, :id, :state, :city, :address, :postal_code, :phone, :image_url, :reserve_url, :price )
   end 
 
