@@ -47,12 +47,6 @@ var openTableApp = angular
                       templateUrl: 'app/reviews/views/reviews.html',
                       controller: 'ReviewsController as reviews'
                     })
-                    // Eat List
-                    .state('eatlist', {
-                      url:'/eatlist',
-                      templateUrl:'app/restaurants/views/eatlist.html', 
-                      controller:'EatListController as eatList' 
-                    })
                     // Reviews NEW
                     .state('newreview', {
                       url:'/reviews/new',
@@ -71,6 +65,19 @@ var openTableApp = angular
                       templateUrl: 'app/reviews/views/edit.html',
                       controller: 'EditReviewController as editReview'
                     })
+                    // Users Index
+                    .state('users', {
+                      url:'/users',
+                      templateUrl: 'app/users/views/users.html',
+                      controller: 'UsersController as users'
+                    })
+                    // Eat List
+                    //.state('showuser', {
+                    //  url:'/users/:id',
+                    //  templateUrl:'app/users/show.html', 
+                    //  controller:'UsersController as user' 
+                    //})
+
                     // Devise - Login
                     .state('login', {
                       url: '/login',

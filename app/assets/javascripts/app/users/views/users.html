@@ -1,0 +1,7 @@
+<h2>Users Index Page</h2> 
+
+  <div class="panel panel-default" ng-repeat="user in users.users | orderBy: 'name' " >
+    <div class="panel-body">
+    {{user.username}}
+    </div>
+  </div>

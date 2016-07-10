@@ -2,7 +2,11 @@ module Api
 
   class UsersController < ApplicationController 
    
-    respond_to :json 
+    respond_to :json
+
+    def index
+      respond_with(User.all.order("id DESC"))
+    end 
       
     def visited_restaurants
       @restaurants = current_user.visited_restaurants
@@ -15,8 +19,7 @@ module Api
     end
 
     def show 
-      @user = set_user
-      respond_with(@user)
+      respond_with(Restaurant.find(params[:id]))
     end 
 
   end

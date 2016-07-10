@@ -23,7 +23,8 @@
          <li ng-hide="signedIn()"><a href="#/register">Register</a></li>
          <li ng-show="signedIn()"><a href="#/">{{ user.username }}</a></li>
          <li ng-show="signedIn()"><a href="#/reviews">All Reviews</a></li>
-         <li ng-show="signedIn()"><a href="#/eatlist">Eat List</a></li>
+         <li ng-show="signedIn()"><a href="#/users">Users</a></li>
+         <li ng-show="signedIn()"><a href="#" ui-sref="showuser({id: user.id})">Your Stuff</a></li>
          <li ng-show="signedIn()"><a ng-click="logout()">Log Out</a></li>
        </ul><br>
      </div>

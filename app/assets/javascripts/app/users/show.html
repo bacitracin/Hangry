@@ -1,1 +1,7 @@
-show.html
+<h2>Places You've Eaten</h2> 
+
+{{user}}
+
+  <div class="panel panel-default" ng-repeat="restaurant in user.restaurants | orderBy: 'name'">
+    {{restaurant.name}}}
+  </div>
