@@ -2,7 +2,13 @@ var openTableApp = angular
                 // Injecting angular-google-maps or including the config block for 
                 // it is breaking everything
                 
-                .module('openTableApp', ['ui.router', 'templates', 'ngResource', 'ngMessages', 'Devise'])
+                .module('openTableApp', ['ui.router', 'templates', 'ngResource', 'ngMessages', 'Devise', 'uiGmapgoogle-maps'])
+                .config(function(uiGmapGoogleMapApiProvider) {
+                    uiGmapGoogleMapApiProvider.configure({
+                        key: 'AIzaSyAzp93o1OZ_zhsxTKUZ82Jwff2KCcjSyBo',
+                        libraries: 'weather,geometry,visualization'
+                    });
+                })
                 .config(function($stateProvider, $urlRouterProvider){
                   $stateProvider
                     // Landing page that asks for your city
