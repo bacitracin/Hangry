@@ -4,13 +4,13 @@
       <div class="panel panel-default">
         
         <div class="panel-body">
-          <h2>{{ showReview.review.review_title }}</h2>
-          <h4>{{ showReview.review.review_date}}</h4>
-          <h4>{{ showReview.review.username}}</h4>
-          <h4>{{ showReview.review.restaurant_name}}
-          <h4>{{ showReview.review.review_text }}</h4>
-          <h4>Score: {{ showReview.review.review_score }}/5</h4>
-          <h4><a href="#" ui-sref="editreview({id: showReview.review.id})">Edit</a></h4>
+          <h3>"{{ showReview.review.review_title }}"</h3>
+          <p>{{ showReview.review.review_date}}</p>
+          <p></p>>{{ showReview.review.username}}</p>
+          <p>{{ showReview.review.restaurant_name}}</p>
+          <p>{{ showReview.review.review_text }}</p>
+          <p>Score: {{ showReview.review.review_score }}/5</p>
+          <p><a href="#" ui-sref="editreview({id: showReview.review.id})">Edit</a></p>
         </div>
 
       </div>

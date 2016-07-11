@@ -1,16 +1,20 @@
 <h2>Reviews</h2>
-<a href="#/reviews/new" ng-click="reviews.updateScope()">Add New Review</a> <br><br>
+<a href="#/reviews/new" ng-click="reviews.updateScope()">Add New Review</a><br><br>
 
-  <div class="panel panel-default" ng-repeat="review in reviews.reviews">
+  Search Restaurant Reviews: <input type="text" ng-model="searchReviews.review_text"/><br><br>
+
+  <div class="panel panel-default" ng-repeat="review in reviews.reviews | orderBy: 'name' | filter: searchReviews" >
     <div class="panel-body">
-
-    <h3>{{ review.review_title}}</h3>
-    <p>Restaurant: {{review.restaurant_name}}</p>
-    <p>Reviewer: {{review.username}}
-    <p>{{ review.review_date }}</p><br>
-    <p>{{ review.review_text }}</p><br>
-    <p>Rating: {{ review.review_score }}/5</p>
-    <a href="#" ui-sref="editreview({id: review.id})">Edit Details</a></div>
-
+      <h3>"{{ review.review_title}}"</h3>
+      <h4><a href="#" ui-sref="restaurant({id: review.restaurant_id})">{{review.restaurant_name}}</a></h4>
+      <p>Reviewer: <a href="#" ui-sref="showuser({id: review.user_id})">{{review.username}}</a></p>
+      <p>{{ review.review_date }}</p><br>
+      <p>{{ review.review_text }}</p><br>
+      <p>Rating: {{ review.review_score }}/5</p>
+      <a href="#" ui-sref="editreview({id: review.id})">Edit Details</a>
     </div>
   </div>
+
+</div>
+
+
