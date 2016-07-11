@@ -71,13 +71,12 @@ var openTableApp = angular
                       templateUrl: 'app/users/views/users.html',
                       controller: 'UsersController as users'
                     })
-                    // Eat List
-                    //.state('showuser', {
-                    //  url:'/users/:id',
-                    //  templateUrl:'app/users/show.html', 
-                    //  controller:'UsersController as user' 
-                    //})
-
+                    // Users Show
+                    .state('showuser', {
+                      url:'/users/:id',
+                      templateUrl: 'app/users/views/show.html',
+                      controller: 'ShowUserController as showUser'
+                    })
                     // Devise - Login
                     .state('login', {
                       url: '/login',

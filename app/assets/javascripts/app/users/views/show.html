@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-8 col-sm-6">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <h2>{{ showUser.user.username }}</h2>
+          <h4>{{ showUser.email}}</h4>
+          <h4>Your Visited Restaurants / Reviews</h4>
+          <div class="panel panel-default" ng-repeat="restaurant in showUser.user.restaurants | orderBy: 'name' | filter: searchRestaurants">
+            <restaurant-result></restaurant-result>
+          </div>
+        </div>
+      </div>
+    </div>
