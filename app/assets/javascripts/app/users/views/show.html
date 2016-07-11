@@ -1,14 +1,22 @@
 <div class="container">
   <div class="row">
-    <div class="col-xs-8 col-sm-6">
-      <div class="panel panel-default">
-        <div class="panel-body">
+    <div class="col-sm-8">
           <h2>{{ showUser.user.username }}</h2>
-          <h4>{{ showUser.email}}</h4>
-          <h4>Your Visited Restaurants / Reviews</h4>
-          <div class="panel panel-default" ng-repeat="restaurant in showUser.user.restaurants | orderBy: 'name' | filter: searchRestaurants">
-            <restaurant-result></restaurant-result>
+          <h4>Reviews of Restaurants You've Visited</h4>
+
+          <div class="panel panel-default" ng-repeat="review in showUser.user.reviews | orderBy: 'name' | filter: searchRestaurants">
+
+          <div class="panel-body">
+            <h2><a href="#" ui-sref="restaurant({id: review.restaurant_id})">{{review.restaurant_name}}</a></h2>
+            <h4>"{{review.review_title}}"</h4>
+            <h4>{{review.review_date}}</h4>
+            <h4>{{review.review_score}}/5</h4>
+            <h4>{{review.review_text}}</h4>
           </div>
+
+          </div>
+
         </div>
       </div>
     </div>
+
