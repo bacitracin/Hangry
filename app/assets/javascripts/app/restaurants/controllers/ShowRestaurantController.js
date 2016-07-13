@@ -21,11 +21,10 @@ function ShowRestaurantController(Restaurant, $stateParams, $scope, RestaurantSe
   var geocoder = new google.maps.Geocoder();
   geocoder.geocode({'address':address},function(results, status){
     if (status == google.maps.GeocoderStatus.OK){
-      alert(address);
-      alert(results[0].geometry.location);
-      alert($scope.map);
-      $scope.map.setCenter(results[0].geometry.location);
-      test=results[0].geometry.location;
+      restaurantLat = (results[0].geometry.location.lat());
+      restaurantLng = (results[0].geometry.location.lng());
+      $scope.map = { center: { latitude: restaurantLat, longitude: restaurantLng}, zoom: 15 };
+
       var marker=new google.maps.Marker({
       map: $scope.map,
       position: results[0].geometry.location
