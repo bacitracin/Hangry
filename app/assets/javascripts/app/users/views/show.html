@@ -4,7 +4,7 @@
       <h2>{{ showUser.user.username }}</h2>
       <h4>Reviews of Restaurants Visited</h4><br>
 
-      <div class="panel panel-default" ng-repeat="review in showUser.user.reviews | orderBy: 'name'">
+      <div class="panel panel-default" ng-repeat="review in showUser.user.reviews | orderBy: 'review_date'">
         <div class="panel-body">
           <h3><a href="#" ui-sref="restaurant({id: review.restaurant_id})">{{review.restaurant_name}}</a></h3>
           <h4>"{{review.review_title}}"</h4>
