@@ -11,7 +11,7 @@ function ShowRestaurantController(Restaurant, $stateParams, $scope, RestaurantSe
   $scope.selectedRestaurant = showRestaurant.restaurant;
   
   $scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
-  $scope.map.marker = new google.maps.Marker();
+  $scope.map.marker;
 
   showRestaurant.updateScope = function(){
     RestaurantService.selectedRestaurant = $scope.selectedRestaurant;
