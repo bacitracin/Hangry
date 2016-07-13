@@ -18,7 +18,7 @@ function ShowRestaurantController(Restaurant, $stateParams, $scope, RestaurantSe
   }
 
   $scope.selectedRestaurant.$promise.then(function(data){
-    var address = (data.address + " " + data.city + " " + data.state + " " + data.postal_code);
+    var address = (data.address + " " + data.city);
     
     var geocoder = new google.maps.Geocoder();
     
