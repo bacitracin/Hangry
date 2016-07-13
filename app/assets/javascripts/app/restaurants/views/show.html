@@ -18,10 +18,9 @@
     </div>
 
     <div class="col-xs-4 col-sm-6">
-      <div id="address"> {{ showRestaurant.restaurant.address}} {{showRestaurant.restaurant.city}} {{ showRestaurant.restaurant.state}}</div>
         <div class="mapDiv">
          <ui-gmap-google-map center='map.center' zoom='map.zoom' marker ='marker'>
-           <ui-gmap-marker coords="marker.coords" options="marker.options" idkey="marker.id"></ui-gmap-marker>
+           <ui-gmap-marker coords="marker.coords" idkey="marker.id"></ui-gmap-marker>
          </ui-gmap-google-map>
         </div>
       </div>

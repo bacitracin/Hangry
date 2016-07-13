@@ -1,6 +1,4 @@
 var openTableApp = angular
-                // Injecting angular-google-maps or including the config block for 
-                // it is breaking everything
                 
                 .module('openTableApp', ['ui.router', 'templates', 'ngResource', 'ngMessages', 'Devise', 'uiGmapgoogle-maps'])
                 .config(function(uiGmapGoogleMapApiProvider) {
