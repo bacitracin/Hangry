@@ -1,4 +1,4 @@
-### openTable / Hangry README
+### Hangry README
 #### Introduction
 
 Simple CRUD app for saving restaurant information. Connects to the unofficial OpenTable API to generate restaurant suggestions in your town. 
