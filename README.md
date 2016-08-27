@@ -3,6 +3,8 @@
 
 Simple CRUD app for saving restaurant information. Connects to the unofficial OpenTable API to generate restaurant suggestions in your town. 
 
+Project Blog Posts [1](http://www.tracyctran.com/code/2016/06/26/rails-angular-project-hangry/) and [2](http://www.tracyctran.com/code/2016/07/18/refactoring-hangry/) 
+
 #### Installation
 
 Clone this repo down to your local machine. 
